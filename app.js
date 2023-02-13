@@ -45,35 +45,83 @@ bot.on("message", msg => {
     const chatId = msg.chat.id
     console.log(msg.text);
     if(msg.text == 'menu'){
-        bot.sendMessage(chatId, "Ovqatni tanlang", {
-            
+        bot.sendMessage(chatId, "Tanlang", {
+
+
             reply_markup: JSON.stringify({
                 keyboard: [
                 [
                     {
-                        text: "Osh"
+                        text: "Ovqatlar"
                     },
                     {
-                        text:"lag'mon"
-                    },
-                    {
-                        text: "mastava"
-                    }
-                ],
-                [
-                    {
-                        text: "Manti"
-                    },
-                    {
-                        text:"Shurva"
-                    },
-                    {
-                        text: "besh barmoq"
+                        text:"Ichimliklar"
                     }
                 ]
             ],
             resize_keyboard: true
+        })           
+
         })
+    }else if(msg.text == 'Ovqatlar'){
+        bot.sendMessage(chatId, "Ovqatni tanlang", {
+            reply_markup: JSON.stringify({
+                keyboard: [
+                            [
+                                {
+                                    text: "Osh"
+                                },
+                                {
+                                    text:"lag'mon"
+                                },
+                                {
+                                    text: "mastava"
+                                }
+                            ],
+                            [
+                                {
+                                    text: "Manti"
+                                },
+                                {
+                                    text:"Shurva"
+                                },
+                                {
+                                    text: "besh barmoq"
+                                }
+                            ]
+                        ],
+                        resize_keyboard: true
+            })
+        })
+    }else if(msg.text == 'Ichimliklar'){
+        bot.sendMessage(chatId, "Ichimlikni tanlang", {
+            reply_markup: JSON.stringify({
+                keyboard: [
+                            [
+                                {
+                                    text: "Fanta"
+                                },
+                                {
+                                    text:"Cola"
+                                },
+                                {
+                                    text: "Pepsi"
+                                }
+                            ],
+                            [
+                                {
+                                    text: "Choy"
+                                },
+                                {
+                                    text:"Gaz Suv"
+                                },
+                                {
+                                    text: "Begaz Suv"
+                                }
+                            ]
+                        ],
+                        resize_keyboard: true
+            })
         })
     }
 })
